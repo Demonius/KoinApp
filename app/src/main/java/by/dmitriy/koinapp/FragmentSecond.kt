@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_main.*
 
-class MainFragment : Fragment() {
+class FragmentSecond : Fragment() {
 
     companion object {
         private const val ARG_PARAM1 = "param1"
@@ -15,7 +15,7 @@ class MainFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            MainFragment().apply {
+            FragmentSecond().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvTitle.text = "Fragment 1"
-        actionButton.text = "Go to 2"
+        tvTitle.text = "Fragment 2"
+        actionButton.text = "Go to 3"
     }
 }

@@ -3,6 +3,7 @@ package by.dmitriy.koinapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findNavController(R.id.containerNavigation).navigate(R.id.start_navigation)
+        val navigationController = findNavController(R.id.containerNavigation)
+        NavigationUI.setupWithNavController(bottomNavigationPanel, navigationController)
     }
 }
