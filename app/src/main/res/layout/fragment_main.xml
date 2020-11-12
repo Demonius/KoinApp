@@ -7,11 +7,13 @@
     tools:context=".MainFragment">
 
     <TextView
+        android:id="@+id/tvText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/actionClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

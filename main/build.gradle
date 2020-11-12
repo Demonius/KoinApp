@@ -40,6 +40,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+//    // Koin
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "org.koin:koin-core:$koin_version"
+
     //Network
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
@@ -49,4 +55,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$navigation"
 
+    //Lifecycle
+//    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle"
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle"
 }

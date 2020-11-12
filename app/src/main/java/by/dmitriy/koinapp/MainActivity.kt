@@ -1,15 +1,21 @@
 package by.dmitriy.koinapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.findNavController
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupNavHost()
+    }
 
-        findNavController(R.id.containerNavigation).navigate(R.id.start_navigation)
+    private fun setupNavHost() {
+        val hostFragment =
+            supportFragmentManager.findFragmentById(R.id.containerNavigation) as NavHostFragment
+        NavigationUI.setupWithNavController(bottomNavController, hostFragment.navController)
     }
 }
